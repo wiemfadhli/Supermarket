@@ -1,3 +1,5 @@
+version: '3.9'
+
 services:
   backend:
     build:
@@ -20,6 +22,7 @@ services:
 
   postgres:
     image: postgres:15
+    container_name: postgres
     environment:
       POSTGRES_DB: mydb
       POSTGRES_USER: postgres
@@ -31,10 +34,56 @@ services:
     networks:
       - app-network
 
+  airflow-webserver:
+    image: apache/airflow:2.1.0
+    container_name: airflow-webserver
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:postgres@postgres:5432/mydb
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    volumes:
+      - ./dags:/opt/airflow/dags
+    ports:
+      - "8080:8080"
+    command: webserver
+    networks:
+      - app-network
+
+  airflow-scheduler:
+    image: apache/airflow:2.1.0
+    container_name: airflow-scheduler
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:postgres@postgres:5432/mydb
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+    volumes:
+      - ./dags:/opt/airflow/dags
+    command: scheduler
+    networks:
+      - app-network
+
+  airflow-init:
+    image: apache/airflow:2.1.0
+    container_name: airflow-init
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:postgres@postgres:5432/mydb
+    volumes:
+      - ./dags:/opt/airflow/dags
+    entrypoint: ["airflow", "db", "init"]
+    networks:
+      - app-network
+
 volumes:
   pgdata:
 
 networks:
   app-network:
     driver: bridge
+
 

@@ -39,40 +39,135 @@ Many businesses struggle with:
 - Slow decision-making due to delayed insights  
 
 This project solves these problems by building a **fully automated ETL pipeline**.
+# ✨ Features
+
+## 🔄 ETL Automation
+- Automated workflows using Apache Airflow
+- Task scheduling and orchestration
+- Pipeline dependency management
+
+## 🧹 Data Transformation
+- Data cleaning with Python
+- Data preprocessing and formatting
+- Structured transformation workflows
+
+## 🗄️ Database Integration
+- PostgreSQL relational database
+- Persistent and scalable storage
+- Optimized data loading process
+
+## 🌐 Backend API
+- RESTful API with Node.js & Express.js
+- Data exposure for frontend consumption
+- Structured API architecture
+
+## 📊 Frontend Dashboard
+- Interactive React dashboard
+- Dynamic data visualization
+- Responsive UI design
+
+## 🐳 Dockerized Infrastructure
+- Multi-container environment
+- Docker Compose orchestration
+- Simplified deployment workflow
 
 ---
 
-## 🏗️ System Architecture
+# 🔄 ETL Workflow
 
-```text id="arch1"
-Data Source
-   ↓
-Apache Airflow (ETL Orchestration)
-   ↓
-PostgreSQL (Data Storage)
-   ↓
-Node.js (REST API Layer)
-   ↓
-React (Dashboard UI)
-## ⚙️ Key Features
-
-- 🔄 Automated ETL pipelines using Apache Airflow  
-- 🧹 Data extraction, cleaning, and transformation  
-- 🗄️ Structured storage in PostgreSQL  
-- 🌐 REST API built with Node.js (Express.js)  
-- 📊 Interactive dashboard built with React  
-- 🐳 Fully containerized using Docker  
-- 🚀 Scalable and production-ready architecture  
+```text
+Extract Data
+      ↓
+Transform & Clean Data
+      ↓
+Load Into PostgreSQL
+      ↓
+Expose Data Through API
+      ↓
+Visualize Insights In Dashboard
+```
 
 ---
 
-## 🔄 ETL Workflow
+# 📂 Project Structure
 
-- 📥 Extract raw data from source  
-- 🧹 Transform data using Python scripts  
-- 🗄️ Load cleaned data into PostgreSQL  
-- ⏰ Schedule and automate workflows with Airflow  
-- 🌐 Expose data using REST API (Node.js)  
-- 📊 Visualize insights in React dashboard  
+```bash
+project-root/
+│
+├── airflow/
+│   ├── dags/
+│   └── logs/
+│
+├── etl/
+│   └── etl_script.py
+│
+├── backend/
+│   ├── routes/
+│   ├── controllers/
+│   └── server.js
+│
+├── frontend/
+│   ├── src/
+│   └── public/
+│
+├── postgres/
+│
+├── docker-compose.yml
+│
+└── README.md
+```
 
 ---
+
+# 🚀 Getting Started
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/your-username/your-repository.git
+```
+
+---
+
+## 2️⃣ Run Docker Containers
+
+```bash
+docker-compose up --build
+```
+
+---
+
+## 3️⃣ Access Services
+
+| Service | URL |
+|----------|------|
+| React Frontend | http://localhost:3000 |
+| Node.js API | http://localhost:5000 |
+| Airflow | http://localhost:8080 |
+
+---
+
+# 🎯 Learning Objectives
+
+This project was built to practice:
+
+- Data Engineering Workflows
+- Apache Airflow Orchestration
+- Backend API Development
+- Database Integration
+- React Dashboard Development
+- Docker Containerization
+- Full-Stack System Architecture
+
+---
+
+# 🔮 Future Improvements
+
+- 🔐 Authentication & Authorization
+- ☁️ AWS Cloud Deployment
+- 📦 CI/CD with GitHub Actions
+- 📡 Real-Time Streaming with Kafka
+- 📊 Advanced Analytics Dashboard
+- 📈 Monitoring with Prometheus & Grafana
+---
+

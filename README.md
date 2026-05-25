@@ -161,13 +161,3 @@ This project was built to practice:
 
 ---
 
-# 🔮 Future Improvements
-
-- 🔐 Authentication & Authorization
-- ☁️ AWS Cloud Deployment
-- 📦 CI/CD with GitHub Actions
-- 📡 Real-Time Streaming with Kafka
-- 📊 Advanced Analytics Dashboard
-- 📈 Monitoring with Prometheus & Grafana
----
-

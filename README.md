@@ -1,10 +1,10 @@
-# 🚀 ETL Pipeline & Data Dashboard
+#  ETL Pipeline & Data Dashboard
 
 Full-Stack Data Engineering Project using **Apache Airflow, PostgreSQL, Node.js, React & Docker**
 
 ---
 
-## 🧩 Tech Stack
+##  Tech Stack
 
 ![Airflow](https://img.shields.io/badge/Apache%20Airflow-Workflow%20Orchestration-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-Data%20Processing-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -16,7 +16,7 @@ Full-Stack Data Engineering Project using **Apache Airflow, PostgreSQL, Node.js,
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project is a complete **end-to-end data engineering system** that automates:
 
@@ -29,7 +29,7 @@ It demonstrates how modern data platforms are built using **automation, APIs, an
 
 ---
 
-## 🧠 Problem Statement
+##  Problem Statement
 
 Many businesses struggle with:
 
@@ -39,41 +39,41 @@ Many businesses struggle with:
 - Slow decision-making due to delayed insights  
 
 This project solves these problems by building a **fully automated ETL pipeline**.
-# ✨ Features
+#  Features
 
-## 🔄 ETL Automation
+##  ETL Automation
 - Automated workflows using Apache Airflow
 - Task scheduling and orchestration
 - Pipeline dependency management
 
-## 🧹 Data Transformation
+##  Data Transformation
 - Data cleaning with Python
 - Data preprocessing and formatting
 - Structured transformation workflows
 
-## 🗄️ Database Integration
+##  Database Integration
 - PostgreSQL relational database
 - Persistent and scalable storage
 - Optimized data loading process
 
-## 🌐 Backend API
+##  Backend API
 - RESTful API with Node.js & Express.js
 - Data exposure for frontend consumption
 - Structured API architecture
 
-## 📊 Frontend Dashboard
+##  Frontend Dashboard
 - Interactive React dashboard
 - Dynamic data visualization
 - Responsive UI design
 
-## 🐳 Dockerized Infrastructure
+##  Dockerized Infrastructure
 - Multi-container environment
 - Docker Compose orchestration
 - Simplified deployment workflow
 
 ---
 
-# 🔄 ETL Workflow
+#  ETL Workflow
 
 ```text
 Extract Data
@@ -89,7 +89,7 @@ Visualize Insights In Dashboard
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```bash
 project-root/
@@ -119,9 +119,9 @@ project-root/
 
 ---
 
-# 🚀 Getting Started
+#  Getting Started
 
-## 1️⃣ Clone Repository
+## 1️ Clone Repository
 
 ```bash
 git clone https://github.com/your-username/your-repository.git
@@ -129,7 +129,7 @@ git clone https://github.com/your-username/your-repository.git
 
 ---
 
-## 2️⃣ Run Docker Containers
+## 2️ Run Docker Containers
 
 ```bash
 docker-compose up --build
@@ -137,7 +137,7 @@ docker-compose up --build
 
 ---
 
-## 3️⃣ Access Services
+##  Access Services
 
 | Service | URL |
 |----------|------|
@@ -147,7 +147,7 @@ docker-compose up --build
 
 ---
 
-# 🎯 Learning Objectives
+#  Learning Objectives
 
 This project was built to practice:
 
